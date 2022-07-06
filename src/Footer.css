@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+}
+
+.footer h1{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: Caveat;
+}
+
+.footer h1 a{
+    text-decoration: none;
+    color: #46D369;
+}
