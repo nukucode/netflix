@@ -23,12 +23,7 @@ function Row({ title, isTop, fetch }) {
         <h3>{title}</h3>
         <div className="list">
           {movies.map((data) => (
-            <img
-              className={isTop ? "bigPoster" : "smallPoster"}
-              src={`${base_url}${
-                isTop ? data.poster_path : data.backdrop_path
-              }`}
-            />
+            <img className="bigPoster" src={`${base_url}${data.poster_path}`} />
           ))}
         </div>
       </div>

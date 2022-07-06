@@ -2,6 +2,7 @@
   "name": "netflix",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://therogersak.github.io/netflix_clone",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -25,6 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
