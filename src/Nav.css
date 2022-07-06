@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 4rem;
+    z-index: 1100;
+}
+
+.nav_logo img{
+    width: 130px;
+}
+
+.user img{
+    border-radius: 50%;
+    width: 60px;
+}
+
+
+
+@media (max-width:800px) {
+    
+    .nav{
+        padding: 15px 1rem;
+    }
+}

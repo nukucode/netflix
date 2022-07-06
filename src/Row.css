@@ -1,0 +1,43 @@
+
+.list {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+  }
+
+.row{
+    margin-top: 1rem;
+    margin-top: -4rem;
+    padding: 2rem 0;
+    padding-left: 1rem;
+}
+
+  .row h3{
+    font-size: 23px;
+    margin: 0;
+    margin-left: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+
+ .list img{
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.list img:hover{
+    transform: scale(1.1);
+}
+
+
+.list .bigPoster{
+    max-height: 250px;
+}
