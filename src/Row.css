@@ -41,3 +41,10 @@
 .list .bigPoster{
     max-height: 250px;
 }
+
+
+
+@media (max-width:800){
+    .row{
+        padding-left: 3px;
+    }
