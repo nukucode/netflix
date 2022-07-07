@@ -20,4 +20,15 @@ body {
 ::-webkit-scrollbar{
   display: none;
   scroll-behavior: smooth;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(36, 35, 35);
+}
+
+::-webkit-scrollbar-track{
+  background:  rgba(17, 17, 17, 0.552)
 }

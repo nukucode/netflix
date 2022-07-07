@@ -4,10 +4,12 @@
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 20px;
+    z-index: 1;
   }
-
-.row{
+  
+  .row{
     margin-top: 1rem;
+    position: relative;
     margin-top: -4rem;
     padding: 2rem 0;
     padding-left: 1rem;
@@ -19,9 +21,12 @@
     margin-left: 1.90rem;
     text-transform: uppercase;
   }
+
+
   
   .list::-webkit-scrollbar {
-    display: none;
+    width: 5px;
+    scroll-behavior: smooth;
   }
 
  .list img{
@@ -30,7 +35,6 @@
     margin: 0 10px;
     cursor: pointer;
     transition: .4s;
-    max-height: 300px;
     border-radius: 2PX;
 }
 
@@ -47,7 +51,7 @@
 }
 
 .list .bigPoster{
-    max-height: 250px;
+    max-height: 300px;
 }
 
 
@@ -57,4 +61,48 @@
         padding-left: 3px;
     }
 
+  }
+
+  .button{
+    display: flex;
+    align-items: center;
+    display: none;
+    transition: .1s;
+    margin: 0 5px;
+    z-index: 1100;
+  }
+  
+  .button .after , .button .before{
+    background: rgba(26, 25, 25, 0.371);
+    width: 35px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+  }
+
+  .button .MuiSvgIcon-root{
+    font-size: 25px;
+  }
+
+  .before{
+    margin-right: auto;
+    left: 0;
+    
+  }
+
+  .after{
+    margin-left: auto;
+    right: 0;
+  }
+
+  .row:hover .button{
+    display: block;
+  }
+
+  .bigPoster:hover .button{
+    display: block;
   }

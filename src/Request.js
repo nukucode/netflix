@@ -1,14 +1,25 @@
 const API_KEY = 'e41e10a70ecb26587607640ae2112868';
 
+
 const requests = {
-	fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+	fetchTrending: `/trending/all/day?api_key=${API_KEY}&language=en-US`,
 	fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_network=123`,
 	fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
 	fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
 	fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
 	fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
 	fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-	fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`
+	fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+
+
+
 };
 
+const movieInfo = async (id) => {
+
+ const info = `/movie/${id}?language=en-US&api_key=${API_KEY}`
+}
+
+
 export default requests;
+export {movieInfo};
