@@ -19,7 +19,6 @@ function Row({ title, isTop, fetch }) {
     fetchData();
   }, [fetch]);
 
-  console.log(movies);
   return (
     <>
       <div className="row">

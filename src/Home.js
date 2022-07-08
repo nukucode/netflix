@@ -9,11 +9,12 @@ import LanguageIcon from "@mui/icons-material/Language";
 import iconAmazon from "./assets/icon-amazon.png";
 import iconNetflix from "./assets/icon-netflix.png";
 import { useParams } from "react-router-dom";
+import {useNavigate} from "react-router-dom"
 const API_KEY = "e41e10a70ecb26587607640ae2112868";
 
 function Home() {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [video, setVideo] = useState([]);
   const [videoId, setVideoId] = useState("");
@@ -46,13 +47,14 @@ function Home() {
 
     setOpen(true);
   }
-  console.log(videoId);
-  console.log(video);
-  console.log(data);
+  
 
   const truncate = (string, num) => {
     return string?.length > num ? string.substr(0, num - 1) + "..." : string;
   };
+
+
+  
 
   return (
     <>
@@ -63,15 +65,17 @@ function Home() {
           backgroundImage: ` url(https://image.tmdb.org/t/p/original/${data.backdrop_path})`,
           backgroundPosition: "center center",
         }}
-      ></div>
+      >
+        
+      </div>
       <div className="home__info">
-        <Link to="/netflix_clone">
-          <div className="back">
+      
+          <div className="back" onClick={() => navigate(-1)}>
             <IconButton>
               <KeyboardBackspaceIcon />
             </IconButton>
           </div>
-        </Link>
+       
         `
         <div className="home__content">
           <div className="details--info">
@@ -112,7 +116,7 @@ function Home() {
           className={open ? "pop_back_open pop_back" : "pop_back"}
           onClick={() => setOpen(false)}
         >
-          <div className="back back__icon">
+          <div className="back__icon">
             <IconButton>
               <KeyboardBackspaceIcon />
             </IconButton>
@@ -123,7 +127,7 @@ function Home() {
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer;  controlls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+  
             ></iframe>
           </div>
         </div>

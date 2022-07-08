@@ -24,7 +24,6 @@ function Banner() {
         fetchUrl();
     },[])
 
-    console.log(movie);
 
     const firstyear = new Date(movie?.first_air_date);
 
@@ -53,7 +52,7 @@ function Banner() {
     </div>
 
       <div className="btn">
-        <Link to={`/details/movie/${movie.id}`}><button className="btn_1">PLAY</button></Link>
+        <Link to={`/details/movie/${movie?.id}`}><button className="btn_1">PLAY</button></Link>
         <button className="btn_2">MY lIST</button>
       </div>
 
