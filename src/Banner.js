@@ -46,7 +46,7 @@ function Banner() {
     
     <div className="banner__del">
     <h4 className="info point">{movie.vote_average} Points</h4>
-     <h4 className="info">{firstyear.getFullYear()}</h4>
+     <h4 className="info">{ firstyear ? firstyear?.getFullYear() : 'Nan'}</h4>
      <h4 className="info">{movie.origin_country}</h4>
     </div>
 

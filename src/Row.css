@@ -6,6 +6,10 @@
     padding: 20px;
     z-index: 1;
   }
+
+  .link{
+   background: #000;
+  }
   
   .row{
     margin-top: 1rem;
@@ -30,12 +34,12 @@
   }
 
  .list img{
-    width: 100%;
     object-fit: contain;
     margin: 0 10px;
     cursor: pointer;
     transition: .4s;
     border-radius: 2PX;
+    max-height: 300px;
 }
 
 .list img:hover{
@@ -50,9 +54,8 @@
   }
 }
 
-.list .bigPoster{
-    max-height: 300px;
-}
+
+
 
 
 

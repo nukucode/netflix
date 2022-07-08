@@ -1,0 +1,40 @@
+.search{
+    z-index: 1100;
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   gap: 10px;
+    padding: 20px;
+}
+
+.lists .bigb{
+    max-height: 250px;
+    border-radius: 2px;
+    transition: .3s;
+    margin: 8px;
+}
+
+.lists .bigb:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+@media (max-width:420px) {
+    
+    .lists .bigb{
+        width: 100%;
+      height: 100%;
+      max-height: 100%;
+    }
+}

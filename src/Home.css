@@ -1,0 +1,135 @@
+.home{
+    background: RED;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.home__info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.50);
+    width: 100%;
+    height: 100vh;
+}
+
+.details--info{
+    background: #46d369;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0 3px 10px;
+}
+
+.home__btn{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home__btn button{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .2s;
+    padding: 12px 30px;
+    box-shadow: rgba(0, 0, 0, 0.801) 0 3px 5px;
+    border-radius: 3px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+.movie_btn{
+    background: linear-gradient(top left , rgba(17, 17, 17, 0.551) , rgba(255, 255, 255, 0.507));
+}
+
+.back{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+}
+
+.back .MuiSvgIcon-root{
+    color: #fff;
+}
+
+.home__content{
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home__content p{
+    font-size: 17px;
+    max-width: 650px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 24px;
+}
+
+.home__content h1{
+    margin: 20px 0;
+}
+
+
+
+
+@media (max-width:950px) {
+
+    .home__content{
+        left: 2rem;
+    }
+
+    .back{
+        left: 2rem;
+    }
+    
+}
+
+
+
+@media (max-width:600px) {
+
+    .home__content{
+        padding-top: 20rem;
+        left: 1rem;
+    }
+
+    .home__content p{
+        font-size: 15px;
+        padding-right: 6px;
+    }
+
+    .home__btn button{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+
+    .back{
+        left: 1rem;
+    }
+
+    
+}
+
+
+@media (max-width:300px) {
+    
+    .home__content{
+        bottom: 2rem;
+    }
+}
