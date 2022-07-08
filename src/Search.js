@@ -11,13 +11,16 @@ function Search({ query, letGo }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+   async function loadAll(){
     if (query) {
-      fetch(
+    await  fetch(
         `https://api.themoviedb.org/3/search/multi?query=${query}&api_key=${API_KEY}&page=1`
       )
         .then((res) => res.json())
         .then((data) => setData(data.results));
     }
+   }
+   loadAll()
   }, [query]);
 
   return (

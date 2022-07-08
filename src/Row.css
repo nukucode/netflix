@@ -50,21 +50,13 @@
 
 @media (max-width:800px) {
   .row{
-    padding-left: 3px;
+    padding-left: 0;
   }
 }
 
 
 
 
-
-
-@media (max-width:800){
-    .row{
-        padding-left: 3px;
-    }
-
-  }
 
   .button{
     display: flex;

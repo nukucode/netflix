@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 import "./App.css";
 import Banner from "./Banner";
 import Footer from "./Footer";
@@ -10,6 +10,10 @@ import Home from "./Home";
 import Search from "./Search";
 
 function App() {
+
+  useEffect(() => {
+      document.title = 'Netflix - therogersak'
+  },[])
   return (
     <>
       <Router>
@@ -42,8 +46,16 @@ function App() {
             }
           />
 
-          <Route path="/details/:type/:id" exact element={<> <Home /> </>} />
-
+          <Route
+            path="/details/:type/:id"
+            exact
+            element={
+              <>
+                {" "}
+                <Home />{" "}
+              </>
+            }
+          />
         </Routes>
       </Router>
     </>

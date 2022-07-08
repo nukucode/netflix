@@ -1,5 +1,4 @@
 .home{
-    background: RED;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -84,7 +83,42 @@
     margin: 20px 0;
 }
 
+.pop_up{
+    z-index: 1100;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    padding-top: 56.25%; 
+}
 
+.pop_up iframe{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.pop_back{
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.pop_back_open{
+    display: flex;
+}
 
 
 @media (max-width:950px) {
@@ -130,6 +164,6 @@
 @media (max-width:300px) {
     
     .home__content{
-        bottom: 2rem;
+        bottom: 3rem;
     }
 }

@@ -11,7 +11,7 @@ function Banner() {
 
         async function fetchUrl(){
 
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const request = await axios.get(requests.fetchTrending);
             setMovie(request.data.results[
                 Math.floor(Math.random() * request.data.results.length -1)
             ]);
@@ -24,7 +24,7 @@ function Banner() {
 
     console.log(movie);
 
-    const firstyear = new Date(movie.first_air_date);
+    const firstyear = new Date(movie?.first_air_date);
 
 
     function truncate(string , num){
@@ -45,9 +45,9 @@ function Banner() {
      <h3 className="banner__title"> {movie?.title || movie?.name || movie?.original_name}</h3>
     
     <div className="banner__del">
-    <h4 className="info point">{movie.vote_average} Points</h4>
-     <h4 className="info">{ firstyear ? firstyear?.getFullYear() : 'Nan'}</h4>
-     <h4 className="info">{movie.origin_country}</h4>
+    <h4 className="info point">{movie?.vote_average} Points</h4>
+     <h4 className="info">{firstyear.getFullYear()}</h4>
+     <h4 className="info">{movie?.origin_country}</h4>
     </div>
 
       <div className=" btn">
@@ -56,7 +56,7 @@ function Banner() {
       </div>
 
       <p>
-        {truncate(movie.overview , 150)}
+        {truncate(movie?.overview , 150)}
       </p>
      </div>
 
