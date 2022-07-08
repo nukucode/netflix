@@ -2,6 +2,8 @@ import React , {useEffect , useState} from "react";
 import "./Banner.css";
 import requests from "./Request";
 import axios from './axios'
+import {Link} from 'react-router-dom';
+
 
 function Banner() {
 
@@ -50,8 +52,8 @@ function Banner() {
      <h4 className="info">{movie?.origin_country}</h4>
     </div>
 
-      <div className=" btn">
-        <button className="btn_1">PLAY</button>
+      <div className="btn">
+        <Link to={`/details/movie/${movie.id}`}><button className="btn_1">PLAY</button></Link>
         <button className="btn_2">MY lIST</button>
       </div>
 

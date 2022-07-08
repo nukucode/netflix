@@ -5,6 +5,9 @@ import TheatersIcon from "@mui/icons-material/Theaters";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import IconButton from "@mui/material/IconButton";
+import LanguageIcon from "@mui/icons-material/Language";
+import iconAmazon from "./assets/icon-amazon.png";
+import iconNetflix from "./assets/icon-netflix.png";
 import { useParams } from "react-router-dom";
 const API_KEY = "e41e10a70ecb26587607640ae2112868";
 
@@ -14,7 +17,7 @@ function Home() {
   const [data, setData] = useState([]);
   const [video, setVideo] = useState([]);
   const [videoId, setVideoId] = useState("");
-  const [open , setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     async function loadAll() {
@@ -69,7 +72,6 @@ function Home() {
             </IconButton>
           </div>
         </Link>
-      
         `
         <div className="home__content">
           <div className="details--info">
@@ -85,29 +87,46 @@ function Home() {
               {" "}
               <TheatersIcon /> Watch video
             </button>
-            <button className="movie_btn">
-              {" "}
-              <PlayArrowIcon /> Watch Movie
-            </button>
+            {data.homepage !== undefined &&
+              data.homepage !== "" && (
+                <a
+                  href={data.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="details--officialsite"
+                >
+                  <div className="movie_btn">
+                    {data.homepage.includes("netflix") ? (
+                      <img alt="Netflix" src={iconNetflix} width="23" />
+                    ) : data.homepage.includes("amazon") ? (
+                      <img alt="Amazon" src={iconAmazon} width="23" />
+                    ) :  (
+                      <LanguageIcon />
+                    )}
+                  </div>
+                </a>
+              )}
           </div>
         </div>
-
-        <div className={open ? 'pop_back_open pop_back' : 'pop_back'} onClick={() => setOpen(false)}>
-        <div className="back">
+        <div
+          className={open ? "pop_back_open pop_back" : "pop_back"}
+          onClick={() => setOpen(false)}
+        >
+          <div className="back back__icon">
             <IconButton>
               <KeyboardBackspaceIcon />
             </IconButton>
           </div>
-       <div className="pop_up">
-          <iframe
-            src={videoId}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer;  controlls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <div className="pop_up">
+            <iframe
+              src={videoId}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer;  controlls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-       </div>
       </div>
     </>
   );

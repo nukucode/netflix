@@ -13,8 +13,8 @@ function Search({ query, letGo }) {
   useEffect(() => {
    async function loadAll(){
     if (query) {
-    await  fetch(
-        `https://api.themoviedb.org/3/search/multi?query=${query}&api_key=${API_KEY}&page=1`
+    await fetch(
+        `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${API_KEY}&page=1`
       )
         .then((res) => res.json())
         .then((data) => setData(data.results));
