@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import LanguageIcon from "@mui/icons-material/Language";
 import iconAmazon from "./assets/icon-amazon.png";
 import iconNetflix from "./assets/icon-netflix.png";
+import db from './Firebase';
 import { useParams } from "react-router-dom";
 import {useNavigate} from "react-router-dom"
 const API_KEY = "e41e10a70ecb26587607640ae2112868";
@@ -21,6 +22,11 @@ function Home() {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState(150)
   const [name, setName] = useState('More...')
+
+
+  
+
+
 
   useEffect(() => {
     async function loadAll() {
@@ -80,6 +86,13 @@ function Home() {
               <KeyboardBackspaceIcon />
             </IconButton>
           </div>
+   
+
+
+       
+        
+    
+       
        
         `
         <div className="home__content">

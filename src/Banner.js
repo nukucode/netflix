@@ -25,7 +25,7 @@ function Banner() {
     },[])
 
 
-    const firstyear = new Date(movie?.first_air_date);
+    const firstyear = new Date(movie.first_air_date);
 
 
     function truncate(string , num){
@@ -48,7 +48,7 @@ function Banner() {
     <div className="banner__del">
     <h4 className="info point">{movie?.vote_average} Points</h4>
      <h4 className="info">{firstyear.getFullYear()}</h4>
-     <h4 className="info">{movie?.origin_country}</h4>
+     <h4 className="info">{movie.origin_country}</h4>
     </div>
 
       <div className="btn">
