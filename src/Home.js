@@ -19,6 +19,8 @@ function Home() {
   const [video, setVideo] = useState([]);
   const [videoId, setVideoId] = useState("");
   const [open, setOpen] = useState(false);
+  const [text, setText] = useState(150)
+  const [name, setName] = useState('More...')
 
   useEffect(() => {
     async function loadAll() {
@@ -50,11 +52,14 @@ function Home() {
   
 
   const truncate = (string, num) => {
-    return string?.length > num ? string.substr(0, num - 1) + "..." : string;
+    return string?.length > num ? string.substr(0, num - 1) : string;
   };
 
 
-  
+  const readMore = () => {
+    setText(1500);
+    setName('')
+  }
 
   return (
     <>
@@ -85,7 +90,7 @@ function Home() {
           </div>
 
           <h1>{data.original_title || data.original_name}</h1>
-          <p>{truncate(data.overview, 150)}</p>
+          <p>{truncate(data.overview, text)} <span className="read__more" onClick={() => readMore()}>{name}</span> </p>
           <div className="home__btn">
             <button className="video_btn" onClick={() => loadVideo()}>
               {" "}

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Nav.css";
-import "./loader.sass";
+import "./loader.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import Search from "./Search";
+import logo from './logo/logo.png'
 
 function Nav() {
   const [query, setquery] = useState("");
@@ -17,8 +18,13 @@ function Nav() {
 
   const results = (e) => {
     e.preventDefault();
-    setLoader(true);
+    setTimeout(() => {
+      setLoader(true)
+    }, 2000);
   };
+
+
+ 
 
   return (
     <div className="nav">
@@ -54,9 +60,9 @@ function Nav() {
         {loader ? (
           <Search query={query} />
         ) : (
-          <div class="gooey">
-            <span class="dot"></span>
-            <div class="dots">
+          <div class={loader ? 'loader__show gooey' : 'gooey'}>
+            <span className="dot"></span>
+            <div className="dots">
               <span></span>
               <span></span>
               <span></span>

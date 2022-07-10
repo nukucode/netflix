@@ -26,7 +26,7 @@ function Row({ title, isTop, fetch }) {
        
         <div className="list">
           {movies.map((data) => (
-            <Link to={`/details/movie/${data.id}`} className="link" ><img className="bigPoster" key={data.id} src={`${base_url}${data.poster_path}`} /></Link>
+            <Link to={`/details/movie/${data.id}`} key={data.id} className="link" ><img className="bigPoster" key={data.id} src={`${base_url}${data.poster_path}`} /></Link>
           ))}
         </div>
       </div>

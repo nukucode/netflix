@@ -57,7 +57,7 @@ function Banner() {
       </div>
 
       <p>
-        {truncate(movie?.overview , 150)}
+        {truncate(movie?.overview , 150)} 
       </p>
      </div>
 

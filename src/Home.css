@@ -6,7 +6,7 @@
 
 .home__info {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+ background: linear-gradient(211deg,transparent, rgba(0, 0, 0, 0.701), #000);
   top: 0;
   left: 0;
   width: 100%;
@@ -23,6 +23,16 @@
   color: #fff;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.5) 0 3px 10px;
+}
+
+.read__more{
+  color: #46d369;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back__icon .MuiSvgIcon-root{
+  color: #fff;
 }
 
 .home__btn {
@@ -97,7 +107,7 @@
   font-size: 17px;
   max-width: 650px;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   line-height: 24px;
 }
 
@@ -180,6 +190,6 @@
 
 @media (max-width: 300px) {
   .home__content {
-    bottom: 4rem;
+    bottom: 5rem;
   }
 }
