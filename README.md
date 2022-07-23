@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-    <a href="https://therogersak.github.io/netflix-clone/"><img src="https://drive.google.com/file/d/1VmIwJHy5WBg3VB4lGYlGdr5-4Y6tuwc0/view?usp=sharing" alt="Logo" width="210"></a>
+    <a href="https://therogersak.github.io/netflix-clone/"><img src="https://github.com/therogersak/netflix_clone/blob/main/netflix_clone.png?raw=true" alt="Logo" width="210"></a>
 </p>
 
 
