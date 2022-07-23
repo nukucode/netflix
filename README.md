@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-    <a href="https://therogersak.github.io/netflix-clone/"><img src="https://github.com/therogersak/netflix_clone/blob/main/netflix_clone.png?raw=true" alt="Logo" width="210"></a>
+    <a href="https://therogersak.github.io/netflix-clone/"><img src="https://github.com/therogersak/netflix_clone/blob/main/netflix_clone.png?raw=true" alt="Logo" width="100%"></a>
 </p>
 
 
@@ -8,7 +8,7 @@
     Netflix homepage clone using React JS.
     <br />
     <br />
-<a href="https://mcosta21.github.io/netflix-clone-reactjs/" target="_blank"><img src="https://drive.google.com/file/d/1t2CS8TyfBonFsQ3Vd1kJdP2AgkoihDwG/view?usp=sharing?raw=true" alt="React JS" width="140"></a>  
+<a href="https://mcosta21.github.io/netflix-clone-reactjs/" target="_blank"><img src="https://github.com/therogersak/netflix_clone/blob/main/second__poster.png?raw=true" alt="React JS" width="100%"></a>  
 </p>
 
 ## Technologies
