@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/netflix_clone/static/css/main.049a5029.css",
-    "main.js": "/netflix_clone/static/js/main.d980d2fc.js",
-    "static/media/logo.png": "/netflix_clone/static/media/logo.af52b1be85adedbf958d.png",
-    "static/media/icon-amazon.png": "/netflix_clone/static/media/icon-amazon.2472dd120c04070bb98d.png",
-    "static/media/icon-netflix.png": "/netflix_clone/static/media/icon-netflix.dacbbe6d743a6787cad7.png",
-    "index.html": "/netflix_clone/index.html",
-    "main.049a5029.css.map": "/netflix_clone/static/css/main.049a5029.css.map",
-    "main.d980d2fc.js.map": "/netflix_clone/static/js/main.d980d2fc.js.map"
+    "main.css": "/netflix_clone_with_react_js/static/css/main.33a21569.css",
+    "main.js": "/netflix_clone_with_react_js/static/js/main.59f166c5.js",
+    "static/media/logo.png": "/netflix_clone_with_react_js/static/media/logo.af52b1be85adedbf958d.png",
+    "static/media/icon-amazon.png": "/netflix_clone_with_react_js/static/media/icon-amazon.2472dd120c04070bb98d.png",
+    "static/media/icon-netflix.png": "/netflix_clone_with_react_js/static/media/icon-netflix.dacbbe6d743a6787cad7.png",
+    "index.html": "/netflix_clone_with_react_js/index.html",
+    "main.33a21569.css.map": "/netflix_clone_with_react_js/static/css/main.33a21569.css.map",
+    "main.59f166c5.js.map": "/netflix_clone_with_react_js/static/js/main.59f166c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.049a5029.css",
-    "static/js/main.d980d2fc.js"
+    "static/css/main.33a21569.css",
+    "static/js/main.59f166c5.js"
   ]
 }
