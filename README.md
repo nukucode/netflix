@@ -48,9 +48,9 @@ To use themoviedb.org API, you must register and obtain an access key, which is 
 
 ## Contact
 
-Marcio Costa - [therogersak@gmail.com](mailto:therogersak@gmail.com)
+the Rogers ak - [therogersak@gmail.com](mailto:therogersak@gmail.com)
 
-| <a href="https://github.com/mcosta21"><img src="https://cdn.iconscout.com/icon/free/png-512/github-153-675523.png" width="30"></a> | <a href="https://www.linkedin.com/in/marcio-costa-03131a149/"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" width="30"></a> | <a href="mailto:marcioc424@gmail.com"><img src="https://image.flaticon.com/icons/png/512/281/281769.png" width="30"></a> | 
+| <a href="https://github.com/therogersak"><img src="https://cdn.iconscout.com/icon/free/png-512/github-153-675523.png" width="30"></a> | <a href="https://www.linkedin.com/in/therogersak/"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" width="30"></a> | <a href="mailto:therogersak@gmail.com"><img src="https://image.flaticon.com/icons/png/512/281/281769.png" width="30"></a> | 
 | --- | --- | --- |
 
 ## License
