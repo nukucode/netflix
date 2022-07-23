@@ -19,7 +19,7 @@ function App() {
         <Router>
           <Routes>
             <Route
-              path="/"
+              path="/netflix_clone_with_react_js"
               element={
                 <>
                   <Nav />
