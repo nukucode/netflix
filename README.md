@@ -17,7 +17,7 @@ Basically, this project was developed based on the following technologies:
 <p align="center">
  <a href="https://pt-br.reactjs.org/" target="_blank"><img src="https://github.com/mcosta21/netflix-clone-reactjs/blob/master/docs/icon-reactjs.png?raw=true" alt="React JS" width="60"></a>
   &nbsp&nbsp
-<a href="https://www.themoviedb.org/" target="_blank"><img src="https://github.com/mcosta21/netflix-clone-reactjs/blob/master/docs/icon-tmdb.png?raw=true" alt="TMDB" width="60"></a>
+<a href="https://www.themoviedb.org/" target="_blank"><img src="https://github.com/mcos1/netflix-clone/blob/master/docs/icon-tmdb.png?raw=true" alt="TMDB" width="60"></a>
   &nbsp&nbsp
 </p>
 
@@ -50,7 +50,7 @@ To use themoviedb.org API, you must register and obtain an access key, which is 
 
 the Rogers ak - [therogersak@gmail.com](mailto:therogersak@gmail.com)
 
-| <a href="https://github.com/therogersak"><img src="https://cdn.iconscout.com/icon/free/png-512/github-153-675523.png" width="30"></a> | <a href="https://www.linkedin.com/in/therogersak/"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" width="30"></a> | <a href="mailto:therogersak@gmail.com"><img src="https://image.flaticon.com/icons/png/512/281/281769.png" width="30"></a> | 
+| <a href="https://github.com/therogersak"><img src="https://cdn.iconscout.com/icon/free/png-512/github-153-675523.png" width="30"></a> | <a href="https://www.linkedin.com/in/therogersak/"><img src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1658541589~hmac=b49b6b398d5d4c1cf356059e84ad2ed8" width="30"></a> | <a href="mailto:therogersak@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="30"></a> | 
 | --- | --- | --- |
 
 ## License
