@@ -2,7 +2,7 @@
   "name": "netflix",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://therogersak.github.io/netflix_clone",
+  "homepage": "https://therogersak.github.io/netflix_clone_with_react_js/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
