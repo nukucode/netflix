@@ -8,7 +8,6 @@
     Netflix homepage clone using React JS.
     <br />
     <br />
-<a href="https://therogersak.github.io/netflix_clone/" target="_blank"><img src="https://github.com/therogersak/netflix_clone/blob/main/second__poster.png?raw=true" alt="React JS" width="100%"></a>  
 </p>
 
 
@@ -19,10 +18,10 @@ With the terminal available, follow the instructions below:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/therogersak/netflix-clone
+$ git clone https://github.com/therogersak/netflix_clone_with_react_js
 
 # Access the netflix-clone folder
-$ cd netflix-clone
+$ cd netflix_clone_with_react_js
 
 # Install dependencies
 $ npm install
@@ -48,5 +47,5 @@ the Rogers ak - [therogersak@gmail.com](mailto:therogersak@gmail.com)
 
 This project is under the MIT license.
 
-> Developed by [therogersak](https://www.linkedin.com/therogersak).
+> Developed by [therogersak](https://www.linkedin.com/in/therogersak).
 <br/>
