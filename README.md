@@ -11,15 +11,6 @@
 <a href="https://mcosta21.github.io/netflix-clone-reactjs/" target="_blank"><img src="https://github.com/therogersak/netflix_clone/blob/main/second__poster.png?raw=true" alt="React JS" width="100%"></a>  
 </p>
 
-## Technologies
-Basically, this project was developed based on the following technologies:
-
-<p align="center">
- <a href="https://pt-br.reactjs.org/" target="_blank"><img src="https://github.com/mcosta21/netflix-clone-reactjs/blob/master/docs/icon-reactjs.png?raw=true" alt="React JS" width="60"></a>
-  &nbsp&nbsp
-<a href="https://www.themoviedb.org/" target="_blank"><img src="https://github.com/mcos1/netflix-clone/blob/master/docs/icon-tmdb.png?raw=true" alt="TMDB" width="60"></a>
-  &nbsp&nbsp
-</p>
 
 
 ## Start project
