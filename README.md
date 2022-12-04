@@ -5,7 +5,7 @@
 
 
 <p align="center">
-    Netflix homepage clone using React JS.
+    Netflix
     <br />
     <br />
 </p>
@@ -18,10 +18,10 @@ With the terminal available, follow the instructions below:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/therogersak/netflix_clone_with_react_js
+$ git clone https://github.com/therogersak/netflix
 
-# Access the netflix-clone folder
-$ cd netflix_clone_with_react_js
+# Access the netflix folder
+$ cd netflix
 
 # Install dependencies
 $ npm install
