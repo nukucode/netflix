@@ -14,7 +14,7 @@
 }
 
 .details--info {
-  background: #46d369;
+  background: #E50914;
   width: 50px;
   height: 50px;
   display: flex;
@@ -26,7 +26,7 @@
 }
 
 .read__more{
-  color: #46d369;
+  color: #E50914;
   font-weight: bold;
   cursor: pointer;
 }
@@ -66,7 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #46d369;
+  color: #E50914;
 }
 
 .back {

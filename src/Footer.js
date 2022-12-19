@@ -1,12 +1,18 @@
-import React from 'react'
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
-    <div className='footer'>
-        <h1>Made By ❤️ <a  href='https://instagram.com/therogersak' target='_blank'>Rogers</a> ❤️</h1>
+    <div className="footer">
+      <a
+        style={{ color: "white", textDecoration: "none" }}
+        href="https://instagram.com/therogersak"
+        target="_blank"
+      >
+        <h1>therogersak</h1>
+      </a>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

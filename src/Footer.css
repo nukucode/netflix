@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
+
 
 .footer{
     display: flex;
@@ -8,12 +9,12 @@
 }
 
 .footer h1{
-    font-size: 20px;
+    font-family: Staatliches;
+    font-size: 40px;
     text-transform: capitalize;
-    font-family: Caveat;
+    color: #E50914;
 }
 
 .footer h1 a{
     text-decoration: none;
-    color: #46D369;
 }
