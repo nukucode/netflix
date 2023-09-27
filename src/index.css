@@ -1,17 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Montserrat;
-  font-weight: bold;
-  background: #000;
+  font-family: Poppins, 'Sens-serif';
+  font-weight: 300;
+  background-color: #141414;
   color: #fff;
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
   width: 5px;
@@ -19,10 +19,19 @@ body {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: rgb(36, 35, 35);
 }
 
-::-webkit-scrollbar-track{
-  background:  rgba(17, 17, 17, 0.552)
+::-webkit-scrollbar-track {
+  background: rgba(17, 17, 17, 0.552)
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
 }

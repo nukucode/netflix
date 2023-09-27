@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { useParams } from "react-router-dom";
 
 export const nextflixApi = createApi({
   reducerPath: "nextflixApi",
@@ -27,6 +26,13 @@ export const nextflixApi = createApi({
       getTrending: builder.query({
         query: () => ({
           url: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+          method: "GET",
+        }),
+      }),
+
+      getAction: builder.query({
+        query: () => ({
+          url: `/discover/movie?with_genres=28&language=en-US&api_key=${API_KEY}`,
           method: "GET",
         }),
       }),
@@ -100,6 +106,15 @@ export const nextflixApi = createApi({
           };
         },
       }),
+      getTrailerVideo: builder.query({
+        query: (params) => {
+          const { type, id } = params;
+          return {
+            url: `/${type}/${id}/videos?language=en-US&api_key=${API_KEY}`,
+            method: "GET",
+          };
+        },
+      }),
     };
   },
 });
@@ -116,4 +131,6 @@ export const {
   useGetHorrorQuery,
   useGetDocumentariesQuery,
   useGetRomanceQuery,
+  useGetTrailerVideoQuery,
+  useGetActionQuery,
 } = nextflixApi;

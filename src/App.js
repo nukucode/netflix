@@ -1,27 +1,17 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import Banner from "./Banner";
-import Footer from "./Footer";
-import Nav from "./Nav";
-import Row from "./Row";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
-
-
-import {
-  useGetDiscoverQuery,
-  useGetComedyQuery,
-  useGetTopRatedQuery,
-  useGetTrendingQuery,
-  useGetTvShowQuery,
-  useGetDocumentariesQuery,
-  useGetHorrorQuery,
-  useGetRomanceQuery,
-} from "./features/Api";
+import Banner from "./components/Banner/Banner";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useGetTrendingQuery } from "./features/Api";
+import Home from "./components/Home/Home";
+import Details from "./pages/Details/Details";
+import Search from "./pages/Search/Search";
 
 function App() {
   useEffect(() => {
-    document.title = "Netflix - therogersak";
+    document.title = "Netflix - raoankit";
   }, []);
   return (
     <>
@@ -32,31 +22,29 @@ function App() {
               path="/"
               element={
                 <>
-                  <Nav />
+                  <Header />
                   <Banner fetch={useGetTrendingQuery()} />
-                  <Row title="Action Movies" fetch={useGetTrendingQuery()} />
-                  <Row
-                    title="Netflix Originals"
-                    fetch={useGetDocumentariesQuery()}
-                  />
-                  <Row title="Trending" fetch={useGetTopRatedQuery()} />
-                  <Row title="Top Rated" fetch={useGetDiscoverQuery()} />
-                  <Row title="Comedy Movies" fetch={useGetComedyQuery()} />
-                  <Row title="Horror Movies" fetch={useGetHorrorQuery()} />
-                  <Row title="Romance Movies" fetch={useGetRomanceQuery()} />
-                  <Row title="TV SHOW" fetch={useGetTvShowQuery()} />
+                  <Home />
                   <Footer />
                 </>
               }
             />
-
             <Route
               path="/details/:type/:id"
               exact
               element={
                 <>
-                  {" "}
-                  <Home />{" "}
+                  <Details />
+                </>
+              }
+            />
+
+            <Route
+              path="/search"
+              exact
+              element={
+                <>
+                  <Search />
                 </>
               }
             />

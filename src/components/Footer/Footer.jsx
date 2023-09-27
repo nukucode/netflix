@@ -6,10 +6,10 @@ function Footer() {
     <div className="footer">
       <a
         style={{ color: "white", textDecoration: "none" }}
-        href="https://instagram.com/therogersak"
+        href="https://instagram.com/raoankittx"
         target="_blank"
       >
-        <h1>therogersak</h1>
+        <h1>Production - raoankit</h1>
       </a>
     </div>
   );

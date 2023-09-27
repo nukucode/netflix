@@ -1,0 +1,141 @@
+.banner {
+    width: 100%;
+    height: 810px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -6rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+.banner-info {
+    padding-left: 4rem;
+    padding-top: 22rem;
+    background: linear-gradient(267deg, transparent, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.315));
+    width: fit-content;
+    height: 80%;
+    z-index: 1100;
+}
+
+.banner .banner-info .netflix-show {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.banner .banner-info .netflix-show img {
+    width: 1.5rem;
+    height: 1.8rem;
+}
+
+.banner .banner-info .netflix-show span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.banner-info h3 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+    line-height: 6rem;
+}
+
+.banner .banner-info .buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.banner .banner-info .buttons .btn {
+    height: 40px;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.banner .banner-info .buttons .play-button {
+    color: black;
+    background-color: white;
+}
+
+.banner .banner-info .buttons .play-button:hover {
+    opacity: 0.75;
+}
+
+.banner .banner-info .buttons .info-button {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.200);
+    cursor: pointer;
+}
+
+.banner .banner-info .buttons .info-button:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+
+}
+
+.banner .banner-info .buttons .btn .button-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.fade__button {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(180deg, rgba(20, 20, 20, 0.00) 0%, #141414 7.48%);
+    ;
+}
+
+/* responsive design */
+
+
+@media (max-width:800px) {
+
+
+    .banner-info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        padding-top: 15.5rem;
+    }
+
+
+    .banner-info h3 {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    .banner-info p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        max-width: 500px;
+    }
+}
+
+
+
+@media (max-width:400px) {
+
+
+
+
+    .banner__info h3 {
+        font-size: 20px;
+    }
+
+    .banner__info p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+}

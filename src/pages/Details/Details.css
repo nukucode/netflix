@@ -35,14 +35,14 @@
   color: #fff;
 }
 
-.home__btn {
+.home-btn {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.home__btn button {
-  font-family: Montserrat;
+.home-btn button {
+  font-family: Poppins;
   font-weight: bold;
   font-size: 17px;
   transition: 0.2s;
@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 
-.movie_btn {
+.movie-btn {
   padding: 12px 15px;
   background: #fff;
   font-size: 24px;
