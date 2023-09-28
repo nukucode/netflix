@@ -6,7 +6,6 @@
   z-index: 1;
 }
 
-
 .row {
   margin-top: 1rem;
   position: relative;
@@ -16,9 +15,14 @@
   padding-left: 2rem;
 }
 
+
+.list .watch:hover {
+  transform: scale(1.1);
+}
+
 .list .watch img {
   width: full;
-  max-width: 260px;
+  height: 150px;
   object-fit: cover;
   margin: 0 8px;
   cursor: pointer;
@@ -42,11 +46,16 @@
   max-height: 300px;
 }
 
-
-.list img:hover {
-  transform: scale(1.1);
+.list .content .icons .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
 }
 
+
+.list .link img:hover {
+  transform: scale(1.1);
+}
 
 
 @media (max-width:800px) {
@@ -54,10 +63,6 @@
     padding-left: 0;
   }
 }
-
-
-
-
 
 .button {
   display: flex;

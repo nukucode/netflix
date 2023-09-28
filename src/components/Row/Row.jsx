@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Row.css";
-import { Link } from "react-router-dom";
 import Label from "../Label/Label";
-
-const base_url = "https://image.tmdb.org/t/p/original";
+import RowItem from "./RowItem";
 
 function Row({ title, fetch, type, isRepeat }) {
   const [movies, setMovies] = useState([]);
@@ -11,7 +9,6 @@ function Row({ title, fetch, type, isRepeat }) {
   useEffect(() => {
     setMovies(fetch.data?.results);
   }, [fetch]);
-  console.log(movies);
 
   return (
     <>
@@ -24,23 +21,7 @@ function Row({ title, fetch, type, isRepeat }) {
           }}
         >
           {movies?.map((data) => (
-            <Link
-              to={`/details/${type}/${data.id}`}
-              key={data.id}
-              className={isRepeat ? "watch" : "link"}
-            >
-              <img
-                className={isRepeat ? "img-watch" : "imgPoster"}
-                key={data.id}
-                src={
-                  !isRepeat
-                    ? `${base_url}${data.poster_path}`
-                    : `${base_url}${data.backdrop_path}`
-                }
-                alt={data.title}
-              />
-
-            </Link>
+            <RowItem data={data} type={type} isRepeat={isRepeat} />
           ))}
         </div>
       </div>
