@@ -1,0 +1,20 @@
+.list {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    z-index: 1;
+    gap: 1.5rem;
+}
+
+
+.trending-lists {
+    margin-top: 1rem;
+    position: relative;
+    margin-top: -3rem;
+    padding: 2rem 0;
+    padding-left: 2rem;
+    z-index: 100;
+    background-color: #141414;
+}
+

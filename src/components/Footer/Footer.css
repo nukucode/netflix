@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+}
+
+.footer h1{
+    font-family: Staatliches;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #E50914;
+}
+
+.footer h1 a{
+    text-decoration: none;
+}

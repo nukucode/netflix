@@ -1,0 +1,25 @@
+.number {
+    font-size: 15.8rem;
+    font-weight: bold;
+    font-family: Open Sans;
+    -webkit-text-stroke: 4px #a1a1a1af;
+    -webkit-text-fill-color: transparent;
+    margin-top: -1rem;
+}
+
+.trendingItem {
+    display: flex;
+    align-items: center;
+    height: auto;
+    height: 185px;
+}
+
+.trendingItem img {
+    object-fit: contain;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .4s;
+    border-radius: 2px;
+    height: 100%;
+    margin-left: -2.55rem;
+}

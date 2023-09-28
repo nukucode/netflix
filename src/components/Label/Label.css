@@ -1,0 +1,27 @@
+ .row-label {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: -1rem;
+}
+
+ .row-label h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 1.90rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+ .row-label h3 span {
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+
+ .row-label .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
