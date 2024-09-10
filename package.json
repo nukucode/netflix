@@ -6,7 +6,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4",
+    "@heroicons/react": "^2.1.5",
     "@mui/material": "^5.8.7",
     "@mui/styled-engine-sc": "^5.8.0",
     "@reduxjs/toolkit": "^1.9.1",
@@ -53,7 +53,8 @@
     ]
   },
   "devDependencies": {
-    "@redux-devtools/core": "^3.13.1"
+    "@redux-devtools/core": "^3.13.1",
+    "tailwindcss": "^3.4.10"
   },
   "description": "<br />\r <p align=\"center\">\r     <a href=\"https://therogersak.github.io/netflix_clone_with_react_js/\"><img src=\"https://github.com/therogersak/netflix_clone/blob/main/netflix_clone.png?raw=true\" alt=\"Logo\" width=\"100%\"></a>\r </p>",
   "main": "index.js",
