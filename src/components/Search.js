@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Search.css";
 import { Link } from "react-router-dom";
-import { useGetSearchQuery } from "./features/Api";
+import { useGetSearchQuery } from "../features/Api";
 import Pagination from "@mui/material/Pagination";
 const base_url = "https://image.tmdb.org/t/p/original";
 

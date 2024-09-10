@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./App.css";
 import Banner from "./Banner";
 import Footer from "./Footer";
 import Nav from "./Nav";
@@ -17,7 +16,7 @@ import {
   useGetDocumentariesQuery,
   useGetHorrorQuery,
   useGetRomanceQuery,
-} from "./features/Api";
+} from "../features/Api";
 
 function App() {
   useEffect(() => {

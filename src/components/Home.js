@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import TheatersIcon from "@mui/icons-material/Theaters";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import IconButton from "@mui/material/IconButton";
-import LanguageIcon from "@mui/icons-material/Language";
-import iconAmazon from "./assets/icon-amazon.png";
-import iconNetflix from "./assets/icon-netflix.png";
+import iconAmazon from "../assets/icon-amazon.png";
+import {LanguageIcon , ArrowUturnLeftIcon, BoltIcon, FilmIcon } from "@heroicons/react/24/outline";
+import iconNetflix from "../assets/icon-netflix.png";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useGetByIdQuery } from "./features/Api";
+import { useGetByIdQuery } from "../features/Api";
 
 function Home() {
   const params = useParams();
@@ -51,9 +48,7 @@ function Home() {
       ></div>
       <div className="home__info">
         <div className="back" onClick={() => navigate(-1)}>
-          <IconButton>
-            <KeyboardBackspaceIcon />
-          </IconButton>
+         <h1>Hello</h1>
         </div>
 
         <div className="home__content">
@@ -73,7 +68,7 @@ function Home() {
           <div className="home__btn">
             <button className="video_btn" onClick={() => loadVideo()}>
               {" "}
-              <TheatersIcon /> Watch video
+              <FilmIcon /> Watch video
             </button>
             {data?.homepage !== undefined && data?.homepage !== "" && (
               <a
@@ -100,9 +95,7 @@ function Home() {
           onClick={() => setOpen(false)}
         >
           <div className="back__icon">
-            <IconButton>
-              <KeyboardBackspaceIcon />
-            </IconButton>
+           <h1>Hello</h1>
           </div>
           <div className="pop_up">
             <iframe
