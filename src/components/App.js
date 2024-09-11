@@ -31,7 +31,6 @@ function App() {
               path="/"
               element={
                 <>
-                  <Nav />
                   <Banner fetch={useGetTrendingQuery()} />
                   <Row title="Action Movies" fetch={useGetTrendingQuery()} />
                   <Row

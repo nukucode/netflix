@@ -3,13 +3,30 @@
 @tailwind utilities;
 
 
-body{
+
+@font-face {
+    font-family: "open-sans";
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+}
+
+body {
     background: #141414;
     margin: 0;
     padding: 0;
 }
 
 
-*{
+* {
     user-select: none;
+}
+
+
+@layer components {
+    .nav-link-text {
+        @apply text-[15px] font-thin;
+    }
+
+    .btn {
+        @apply flex items-center space-x-1 h-[40px] rounded-[4px] px-3;
+    }
 }
