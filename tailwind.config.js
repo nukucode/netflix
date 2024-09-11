@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans':["open-sans"]
-      }
+        sans: ["open-sans", "sans-serif"],
+        montserrat: ["montserrat", "sens-serif"],
+        roboto: ["roboto", "sens-serif"],
+      },
     },
   },
   plugins: [],
-}
-
+};
