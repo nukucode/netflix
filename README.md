@@ -14,7 +14,7 @@
 
 ## Start project
 
-With the terminal available, follow the instructions below:
+With the terminal available, follow the instructions below::
 
 ```bash
 # Clone the repository
