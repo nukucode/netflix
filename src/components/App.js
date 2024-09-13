@@ -6,7 +6,6 @@ import Row from "./Row";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 
-
 import {
   useGetDiscoverQuery,
   useGetComedyQuery,
@@ -20,7 +19,7 @@ import {
 
 function App() {
   useEffect(() => {
-    document.title = "Netflix - therogersak";
+    document.title = "Netflix A Clone Project By Nukucode";
   }, []);
   return (
     <>

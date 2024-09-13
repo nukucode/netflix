@@ -33,7 +33,7 @@ function Banner({ fetch }) {
     >
       <Nav />
       {/* Banner Text */}
-      <div className="absolute bottom-[200px] sm:bottom-[190px] left-[25px] sm:left-[64px] space-y-5">
+      <div className="absolute bottom-[200px] sm:bottom-[190px] left-4 md:left-[64px] space-y-5">
         <div className="flex items-center space-x-3">
           <div className=" w-[18px] h-[31px]">
             <img

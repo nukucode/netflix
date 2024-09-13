@@ -13,37 +13,55 @@ function Row({ title, fetch }) {
     setMovies(fetch.data?.results);
   }, [fetch]);
 
-  const handleText = () => {
-    console.log("👲", "Mouse Enter");
-    setText(!text);
-    console.log("🧛‍♂️", "Mouse Out");
+  // show text if user hover title
+  const handleTextShow = () => {
+    setText(true);
+  };
+
+  // hide text if user not hover title
+  const handleTextHide = () => {
+    setText(false);
+  };
+
+  // => arrow animate
+  const arrowMove = {
+    x: 10,
+  };
+
+  const arrowReturn = {
+    x: 0,
   };
 
   return (
     <>
-      <div className="relative left-[64px] -top-[110px] mb-[50px]">
+      <div className="w-full overflow-scroll relative -top-[110px] mb-[50px]">
         {/* Row Title */}
-        <motion.div
-          onMouseOver={handleText}
-          className="flex items-center space-x-2"
+        <div
+          onMouseOver={handleTextShow}
+          onMouseOut={handleTextHide}
+          className="flex items-center space-x-2 px-4 md:px-[64px]"
         >
           <h3 className="font-roboto text-[20px] normal-case text-white">
             {title}
           </h3>
-          <motion.div
-            whileHover={{ x: 40 }}
-            key={1}
-            transition={{ duration: 0.2 }}
+          <motion.span
+            animate={text && text ? { opacity: 1 } : { opacity: 0 }}
+            className={`text-[12px] text-white font-semibold ${
+              text && text ? "block" : "hidden"
+            }`}
           >
-            {text && text ? (
-              <span className="text-[15px]">Explore All</span>
-            ) : null}
+            Explore All
+          </motion.span>
+          <motion.div
+            animate={text && text ? arrowMove : arrowReturn}
+            transition={{ duration: 0.5 }}
+          >
             <ChevronRightIcon className="h-5 text-white" />
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* Row Content */}
-        <div className="flex overflow-y-hidden overflow-x-scroll mt-4 mr-2">
+        <div className="flex overflow-y-hidden overflow-x-scroll no-scrollbar mt-4 mr-2 px-4 md:px-[64px]">
           {movies?.map((data) => (
             <Link
               to={`/details/${"movie" || "tv"}/${data.id}`}
@@ -51,7 +69,7 @@ function Row({ title, fetch }) {
               className=""
             >
               <img
-                className="max-h-[300px] rounded-sm object-cover"
+                className="max-w-[160px] rounded-sm object-cover pr-4"
                 key={data.id}
                 src={`${base_url}${data.poster_path}`}
                 alt={data?.title}

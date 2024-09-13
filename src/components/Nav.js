@@ -7,21 +7,23 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { getQuery } from "../features/searchSlice";
+import { useDispatch } from "react-redux";
 
 function Nav() {
   const [openMenu, setOpenMenu] = useState(false);
+  const dispatch = useDispatch();
 
   // Menubar Open Function
   const handleMenu = () => {
-    console.log("👩‍🔬", "Button Clicked");
     setOpenMenu(true);
   };
 
   // Menubar Close Function
   const handleClose = () => {
-    console.log("🤷", "Button Clicked");
     setOpenMenu(false);
   };
+
   return (
     <header className="flex items-center justify-between flex-wrap mx-auto px-8 py-4">
       {/* Navbar */}
@@ -67,7 +69,7 @@ function Nav() {
           </li>
           {/* Responsive Navbar Close Button */}
           {openMenu && (
-            <button className="absolute cursor-pointer top-0 right-0 m-3">
+            <button className="absolute cursor-pointer top-2 right-4 m-3">
               <XMarkIcon
                 onClick={handleClose}
                 className="h-[24px] w-[24px] text-white"
@@ -84,16 +86,29 @@ function Nav() {
       </nav>
       {/* Right Side Buttons */}
       <div className="flex items-center justify-between space-x-6">
+        {/* SearchBar */}
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="max-w-sm h-[33px] mx-auto border border-white flex items-center px-2"
+        >
+          <MagnifyingGlassIcon className="h-[20px] icon" />
+          <input
+            type="search"
+            placeholder="Search Movies"
+            onChange={(e) => dispatch(getQuery(e.target.value))}
+            className="w-full h-full px-1 bg-transparent border-none outline-none text-white"
+          />
+        </form>
         {/* Search Icon */}
         <button>
-          <MagnifyingGlassIcon className="h-[24px] w-[24px] text-white" />
+          <MagnifyingGlassIcon className="h-[24px] icon" />
         </button>
         {/* Notification Icon */}
         <button>
-          <BellIcon className="h-[24px] w-[24px] text-white" />
+          <BellIcon className="h-[24px] w-[24px] icon" />
         </button>
         <button onClick={handleMenu} className="inline-block md:hidden">
-          <Bars3Icon className="h-[24px] w-[24px] text-white" />
+          <Bars3Icon className="h-[24px] icon" />
         </button>
       </div>
     </header>

@@ -3,11 +3,15 @@ import "./Search.css";
 import { Link } from "react-router-dom";
 import { useGetSearchQuery } from "../features/Api";
 import Pagination from "@mui/material/Pagination";
+import { useSelector } from "react-redux";
 const base_url = "https://image.tmdb.org/t/p/original";
 
-function Search({ query }) {
+function Search({query}) {
   const [pages, setPages] = useState(5);
   const [pageCount, setPageCount] = useState(1);
+
+  // get value from redux store
+
   const info = {
     query: query,
     pageCount: pageCount,
@@ -21,7 +25,7 @@ function Search({ query }) {
   }, [data]);
 
   const pageHandler = (e, value) => {
-    e.preventDefault()
+    e.preventDefault();
     setPageCount(value);
   };
 
@@ -37,10 +41,7 @@ function Search({ query }) {
             >
               <img
                 className="bigb"
-                src={`${base_url}${
-                  data?.poster_path ||
-                  data?.backdrop_path
-                } `}
+                src={`${base_url}${data?.poster_path || data?.backdrop_path} `}
               />
               <div className="box__info">
                 <h3>{data.name || data.original_name || data.title}</h3>

@@ -1,8 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { useParams } from "react-router-dom";
-
-export const nextflixApi = createApi({
-  reducerPath: "nextflixApi",
+export const netflixApi = createApi({
+  reducerPath: "netflixApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://api.themoviedb.org/3",
   }),
@@ -116,4 +114,4 @@ export const {
   useGetHorrorQuery,
   useGetDocumentariesQuery,
   useGetRomanceQuery,
-} = nextflixApi;
+} = netflixApi;
