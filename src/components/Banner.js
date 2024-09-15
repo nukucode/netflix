@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PlayIcon, ExclamationCircleIcon } from "@heroicons/react/24/outline";
-import Nav from "./Nav";
 
 function Banner({ fetch }) {
   const [movie, setMovie] = useState([]);
@@ -14,24 +13,15 @@ function Banner({ fetch }) {
     );
   }, [fetch]);
 
-  console.log(movie);
-
-  const firstyear = new Date(movie?.release_date);
-
-  function truncate(string, num) {
-    return string?.length > num ? string.substr(0, num - 1) + "..." : string;
-  }
-
   return (
     <div
-      className="min-h-[810px]"
+      className={`min-h-[810px] -mt-[4rem] backdrop-blur-sm`}
       style={{
         backgroundSize: "cover",
         backgroundImage: ` url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
         backgroundPosition: "center center",
       }}
     >
-      <Nav />
       {/* Banner Text */}
       <div className="absolute bottom-[200px] sm:bottom-[190px] left-4 md:left-[64px] space-y-5">
         <div className="flex items-center space-x-3">

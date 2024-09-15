@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./loader.css";
 import {
   MagnifyingGlassIcon,
@@ -12,7 +12,26 @@ import { useDispatch } from "react-redux";
 
 function Nav() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [headerColor, setheaderColor] = useState(false);
   const dispatch = useDispatch();
+
+  // scroll event listener
+  const listenScrollEvent = () => {
+    if (window.screenY > 73) {
+      setheaderColor(true);
+    } else {
+      setheaderColor(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, [])
+
+  console.log("🙇‍♀️", headerColor);
 
   // Menubar Open Function
   const handleMenu = () => {
@@ -25,7 +44,11 @@ function Nav() {
   };
 
   return (
-    <header className="flex items-center justify-between flex-wrap mx-auto px-8 py-4">
+    <header
+      className={`sticky top-0 z-[999] flex items-center justify-between flex-wrap mx-auto px-8 py-4 ${
+        headerColor ? "bg-black/50" : "bg-transparent"
+      }`}
+    >
       {/* Navbar */}
       <nav className="flex items-center justify-between space-x-0 md:space-x-4">
         {/* Navbar logo */}

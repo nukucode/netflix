@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
 import iconAmazon from "../assets/icon-amazon.png";
-import {LanguageIcon , ArrowUturnLeftIcon, BoltIcon, FilmIcon } from "@heroicons/react/24/outline";
+import {
+  LanguageIcon,
+  ArrowUturnLeftIcon,
+  BoltIcon,
+  FilmIcon,
+} from "@heroicons/react/24/outline";
 import iconNetflix from "../assets/icon-netflix.png";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -39,74 +43,13 @@ function Home() {
   return (
     <>
       <div
-        className="home"
+        className="w-full h-screen relative"
         style={{
           backgroundSize: "cover",
           backgroundImage: ` url(https://image.tmdb.org/t/p/original/${data?.backdrop_path})`,
           backgroundPosition: "center center",
         }}
       ></div>
-      <div className="home__info">
-        <div className="back" onClick={() => navigate(-1)}>
-         <h1>Hello</h1>
-        </div>
-
-        <div className="home__content">
-          <div className="details--info">
-            <h3 className={data?.vote_average > 5 ? "positive" : "negative"}>
-              {data?.vote_average.toFixed(0) * 10 + "%"}
-            </h3>
-          </div>
-
-          <h1>{data?.original_title || data?.original_name}</h1>
-          <p>
-            {truncate(data?.overview, text)}{" "}
-            <span className="read__more" onClick={() => readMore()}>
-              {name}
-            </span>{" "}
-          </p>
-          <div className="home__btn">
-            <button className="video_btn" onClick={() => loadVideo()}>
-              {" "}
-              <FilmIcon /> Watch video
-            </button>
-            {data?.homepage !== undefined && data?.homepage !== "" && (
-              <a
-                href={data.homepage}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="details--officialsite"
-              >
-                <div className="movie_btn">
-                  {data.homepage.includes("netflix") ? (
-                    <img alt="Netflix" src={iconNetflix} width="23" />
-                  ) : data.homepage.includes("amazon") ? (
-                    <img alt="Amazon" src={iconAmazon} width="23" />
-                  ) : (
-                    <LanguageIcon />
-                  )}
-                </div>
-              </a>
-            )}
-          </div>
-        </div>
-        <div
-          className={open ? "pop_back_open pop_back" : "pop_back"}
-          onClick={() => setOpen(false)}
-        >
-          <div className="back__icon">
-           <h1>Hello</h1>
-          </div>
-          <div className="pop_up">
-            <iframe
-              src={videoId}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer;  controlls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
-          </div>
-        </div>
-      </div>
     </>
   );
 }
