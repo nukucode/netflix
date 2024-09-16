@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #141414;
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    user-select: none;
+}
+
+@layer components {
+
+    /* Hide Scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide Scrollbar for Firefox, IE, and Edge */
+    .no-scrollbar {
+        /* IE, Edge */
+        -ms-overflow-style: none;
+        /* Firefox */
+        scrollbar-width: none;
+    }
+
+    .nav-link-text {
+        @apply text-[15px] font-thin text-white;
+    }
+
+    .btn {
+        @apply flex items-center space-x-1 h-[40px] rounded-[4px] px-3;
+    }
+
+    .icon {
+        @apply text-white
+    }
+
+    .pagination {
+        @apply flex items-center justify-center my-[40px]
+    }
+
+    .pagination .MuiPagination-ul div {
+        @apply text-white text-white
+    }
+
+    .pagination .MuiPagination-ul li button {
+        @apply bg-netflixColor text-white
+    }
+
+    .pagination .MuiPagination-ul .Mui-selected {
+        @apply bg-netflixColor text-white
+    }
+}
+
+

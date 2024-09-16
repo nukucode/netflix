@@ -10,7 +10,7 @@ export const netflixApi = createApi({
     return {
       getDiscover: builder.query({
         query: () => ({
-          url: `/discover/movie?api_key=${API_KEY}&with_network=123&language=en-US`,
+          url: `discover/tv?api_key=${API_KEY}&with_networks=213&sort_by=popularity.desc&language=en-US`,
           method: "GET",
         }),
       }),
@@ -24,29 +24,43 @@ export const netflixApi = createApi({
 
       getTrending: builder.query({
         query: () => ({
-          url: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+          url: `trending/all/week?api_key=${API_KEY}&sort_by=popularity.desc&language=en-US`,
+          method: "GET",
+        }),
+      }),
+
+      getTrendingSeries: builder.query({
+        query: () => ({
+          url: `/trending/tv/week?api_key=${API_KEY}&sort_by=popularity.desc&language=en-US`,
           method: "GET",
         }),
       }),
 
       getComedy: builder.query({
         query: () => ({
-          url: `/discover/movie?api_key=${API_KEY}&with_genres=35&language=en-US`,
+          url: `discover/movie?api_key=${API_KEY}&with_genres=35`,
           method: "GET",
         }),
       }),
 
-      getTvShow: builder.query({
+      getAnimated: builder.query({
         query: () => ({
-          url: `/discover/tv?api_key=${API_KEY}&with_network=123&language=en-US`,
+          url: `discover/movie?api_key=${API_KEY}&with_genres=16`,
           method: "GET",
         }),
       }),
 
-      getPopular: builder.query({
+      getSiFi: builder.query({
+        query: () => ({
+          url: `discover/movie?api_key=${API_KEY}&with_genres=878`,
+          method: "GET",
+        }),
+      }),
+
+      getHorror: builder.query({
         query: () => {
           return {
-            url: `/movie/popular?api_key=${API_KEY}&page=1&language=en=US`,
+            url: `discover/movie?api_key=${API_KEY}&with_genres=27`,
             method: "GET",
           };
         },
@@ -81,19 +95,20 @@ export const netflixApi = createApi({
         },
       }),
 
-      getHorror: builder.query({
-        query: () => {
+      getVideos: builder.query({
+        query: (params) => {
+          const { type, id } = params;
           return {
-            url: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+            url: `/${type}/${id}/videos?api_key=${API_KEY}&language=en-US`,
             method: "GET",
           };
         },
       }),
 
-      getDocumentaries: builder.query({
+      getAdventure: builder.query({
         query: () => {
           return {
-            url: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+            url: `discover/movie?api_key=${API_KEY}&with_genres=12`,
             method: "GET",
           };
         },
@@ -107,11 +122,13 @@ export const {
   useGetComedyQuery,
   useGetTopRatedQuery,
   useGetTrendingQuery,
-  useGetTvShowQuery,
-  useGetPopularQuery,
+  useGetSiFiQuery,
+  useGetHorrorQuery,
   useGetByIdQuery,
   useGetSearchQuery,
-  useGetHorrorQuery,
-  useGetDocumentariesQuery,
   useGetRomanceQuery,
+  useGetVideosQuery,
+  useGetTrendingSeriesQuery,
+  useGetAdventureQuery,
+  useGetAnimatedQuery,
 } = netflixApi;
