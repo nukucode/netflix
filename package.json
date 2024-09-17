@@ -21,6 +21,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.14.1",
     "react-top-loading-bar": "^2.1.0",
     "redux": "^4.2.0",
     "sass": "^1.53.0",
