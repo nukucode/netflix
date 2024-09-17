@@ -22,9 +22,6 @@ import ErrorPage from "./pages/ErrorPage";
 import SearchPage from "./pages/SearchPage";
 
 function App() {
-  useEffect(() => {
-    document.title = "Netflix A Clone Project By Nukucode";
-  }, []);
   return (
     <>
       <div className="app">
@@ -35,10 +32,11 @@ function App() {
               element={
                 <>
                   <Nav />
-                  <Banner fetch={useGetTrendingQuery()} />
+                  <Banner useGetTrendingQuery={useGetTrendingQuery} />
                   <Row
                     title="Netflix Originals"
                     fetch={useGetDiscoverQuery()}
+                    type="tv"
                   />
                   <Row title="Trending" fetch={useGetTrendingQuery()} />
                   <Row title="Top Rated" fetch={useGetTopRatedQuery()} />

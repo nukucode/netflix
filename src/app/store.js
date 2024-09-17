@@ -6,7 +6,7 @@ import searchReducer from "../features/searchSlice";
 export const store = configureStore({
   reducer: {
     [netflixApi.reducerPath]: netflixApi.reducer,
-    searchReducer: searchReducer,
+    search: searchReducer,
   },
   // Adding the api middleware enables caching, invalidation, polling,
   // and other useful features of `rtk-query`.

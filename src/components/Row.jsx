@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
-function Row({ title, fetch }) {
+function Row({ title, fetch, type = "movie" }) {
   const [movies, setMovies] = useState([]);
   const [text, setText] = useState(false);
 
   useEffect(() => {
     setMovies(fetch.data?.results);
   }, [fetch]);
-
 
   // show text if user hover title
   const handleTextShow = () => {
@@ -64,12 +63,18 @@ function Row({ title, fetch }) {
         {/* Row Content */}
         <div className="flex overflow-y-hidden overflow-x-scroll no-scrollbar mt-4 mr-2 px-4 md:px-[64px]">
           {movies?.map((data) => (
-            <Link to={`/details/${data.media_type}/${data.id}`} key={data.id}>
+            <Link
+              to={`/details/${data.media_type ? data?.media_type : type}/${
+                data.id
+              }`}
+              key={data.id}
+            >
               <img
                 className="max-w-[160px] rounded-sm object-cover pr-4"
                 key={data.id}
                 src={`${base_url}${data.poster_path}`}
                 alt={data?.title}
+                loading="lazy"
               />
             </Link>
           ))}
