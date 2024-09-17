@@ -12,7 +12,7 @@ function Banner({ useGetTrendingQuery }) {
     setItem(
       data?.results[Math.floor(Math.random() * data?.results.length - 1)]
     );
-  }, [useGetTrendingQuery()]);
+  }, [data?.results]);
 
   // short overview
   const shortOverview = (text) => {
